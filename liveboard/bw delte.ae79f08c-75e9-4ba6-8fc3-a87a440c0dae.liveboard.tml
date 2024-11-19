@@ -115,6 +115,41 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Day(Partition Date ***)\",\"columnProperty\": {}},{\"columnId\": \"Number Players ***\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"34cc19f2-0d1d-4870-b6bc-367170a46c5a\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number Players ***\"],\"isOpposite\": false}},{\"id\": \"a7b96ccc-c686-4547-b5b7-ed9f41720815\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Day(Partition Date ***)\"]}}]}"
       display_mode: CHART_MODE
     viz_guid: 12fdbc54-95f7-47c0-a6e4-6483634bff87
+  - id: Viz_4
+    answer:
+      name: Total New Players Daily
+      tables:
+      - id: RFP **
+        name: RFP **
+        fqn: ede3a363-f875-4caa-bce0-7b2979218801
+      search_query: "[Number Players ***] [Partition Date ***].daily [Partition Date ***].'last 28 days' [Status ***].new"
+      answer_columns:
+      - name: Day(Partition Date ***)
+      - name: Number Players ***
+      table:
+        table_columns:
+        - column_id: Day(Partition Date ***)
+          headline_aggregation: MIN-MAX
+        - column_id: Number Players ***
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Day(Partition Date ***)
+        - Number Players ***
+        client_state: ""
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Day(Partition Date ***)
+        - column_id: Number Players ***
+        axis_configs:
+        - x:
+          - Day(Partition Date ***)
+          "y":
+          - Number Players ***
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Day(Partition Date ***)\",\"columnProperty\": {}},{\"columnId\": \"Number Players ***\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"34cc19f2-0d1d-4870-b6bc-367170a46c5a\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number Players ***\"],\"isOpposite\": false}},{\"id\": \"a7b96ccc-c686-4547-b5b7-ed9f41720815\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Day(Partition Date ***)\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: 83c45505-e757-4eb9-abae-724e5b890024
   parameter_overrides:
   - key: ca9cf071-ae5e-4382-92a1-4349db241162
     value:
