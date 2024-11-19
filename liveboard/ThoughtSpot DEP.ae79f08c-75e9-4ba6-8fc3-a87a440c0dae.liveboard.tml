@@ -4,7 +4,7 @@ liveboard:
   visualizations:
   - id: Viz_1
     answer:
-      name: Unique Count Player ID by Daily Partition Date ***
+      name: Number Players by Status last 28 days
       tables:
       - id: RFP **
         name: RFP **
@@ -42,7 +42,7 @@ liveboard:
           color:
           - Status ***
         client_state: ""
-        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Day(Partition Date ***)\",\"columnProperty\": {}},{\"columnId\": \"Unique Number of Player ID\",\"columnProperty\": {}},{\"columnId\": \"Status ***\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"1f9ca3f1-eff6-42e7-8f66-64f6cb2805ee\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Unique Number of Player ID\"],\"isOpposite\": false}},{\"id\": \"e083aed3-8686-42c8-94fc-8f6752c1aa21\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Day(Partition Date ***)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Unique Number of Player ID\",\"color\": \"#FCC838\"},{\"serieName\": \"new\",\"color\": \"#2E75F0\"},{\"serieName\": \"retained\",\"color\": \"#48D1E0\"},{\"serieName\": \"revived\",\"color\": \"#FCC838\"}]}"
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {\"xGridlineEnabled\": true,\"yGridlineEnabled\": true},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"markersEnabled\": true,\"customProps\": \"{\\\"advancedProperties\\\":{\\\"tooltip\\\":{\\\"enabled\\\":true,\\\"borderWidth\\\":\\\"1\\\",\\\"opacity\\\":\\\"100\\\",\\\"label\\\":{\\\"fontSize\\\":\\\"12\\\",\\\"boldFontWeight\\\":false,\\\"underlineTextDecoration\\\":false,\\\"italicFontStyle\\\":false},\\\"value\\\":{\\\"fontSize\\\":\\\"12\\\",\\\"boldFontWeight\\\":false,\\\"underlineTextDecoration\\\":false,\\\"italicFontStyle\\\":false}},\\\"regression\\\":{\\\"lineWidth\\\":\\\"2\\\",\\\"dashStyle\\\":\\\"Solid\\\"},\\\"gridlines\\\":{\\\"xAxis\\\":{\\\"gridLineWidth\\\":\\\"2\\\",\\\"gridLineDashStyle\\\":\\\"Solid\\\"},\\\"yAxis\\\":{\\\"gridLineColor\\\":\\\"\\\",\\\"gridLineWidth\\\":\\\"2\\\",\\\"gridLineDashStyle\\\":\\\"Dot\\\"}},\\\"answerLevelSettings\\\":{\\\"dashStyle\\\":\\\"Solid\\\",\\\"lineWidth\\\":\\\"\\\",\\\"markerType\\\":\\\"Circle\\\",\\\"markerRadius\\\":\\\"\\\",\\\"borderWidth\\\":\\\"0\\\",\\\"connectingLines\\\":false}}}\",\"dataFieldArea\": \"column\"},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"Day(Partition Date ***)\",\"columnProperty\": {}},{\"columnId\": \"Status ***\",\"columnProperty\": {}},{\"columnId\": \"Unique Number of Player ID\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"1f9ca3f1-eff6-42e7-8f66-64f6cb2805ee\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Unique Number of Player ID\"],\"isOpposite\": false}},{\"id\": \"e083aed3-8686-42c8-94fc-8f6752c1aa21\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Day(Partition Date ***)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Unique Number of Player ID\",\"color\": \"#FCC838\"},{\"serieName\": \"new\",\"color\": \"#2E75F0\"},{\"serieName\": \"retained\",\"color\": \"#48D1E0\"},{\"serieName\": \"revived\",\"color\": \"#FCC838\"}]}"
       display_mode: CHART_MODE
     viz_guid: 8440c8c3-f895-4e43-8372-caecdd955cdc
   - id: Viz_2
