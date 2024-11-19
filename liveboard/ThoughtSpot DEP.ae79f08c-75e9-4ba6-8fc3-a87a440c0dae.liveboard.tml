@@ -266,6 +266,67 @@ liveboard:
     viz_guid: 28d7f2ce-8ba8-45ea-a2e6-b45561213716
     note_tile:
       html_parsed_string: "<p class=\"theme-module__editor-paragraph\"><img id=\"7b61249c-6272-4fcb-bf0a-4d38480f012a\" alt=\"UPLOAD\" style=\"height: inherit; width: 44%; max-width: 100%;\"></p><p class=\"theme-module__editor-paragraph\"><br></p><h1 dir=\"ltr\"><span style=\"white-space: pre-wrap;\">Data Exploration Platform</span></h1><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><br></p><hr><ul><li value=\"1\"><a href=\"https://docs.google.com/document/d/1XyqUHvyj63w7aFhk9WE-VaRqW2b55etPgEFJeV2JSH0/edit?tab=t.0#heading=h.xx5c85z5o3lr\" target=\"_blank\" rel=\"noreferrer\" class=\"theme-module__editor-link\"><span style=\"white-space: pre-wrap;\">Riot RFP</span></a></li><li value=\"2\"><a href=\"https://docs.google.com/presentation/d/1Ux72U4f3dg50YSe5E3rzHUZDFc9U4jBxFrTzDlaitt4/edit#slide=id.g3162db030e8_0_28\" target=\"_blank\" rel=\"noreferrer\" class=\"theme-module__editor-link\"><span style=\"white-space: pre-wrap;\">ThoughtSpot DEP Showcase Deck</span></a></li></ul><p class=\"theme-module__editor-paragraph\"><br></p><h2 class=\"theme-module__editor-h2\" dir=\"ltr\"><span style=\"white-space: pre-wrap;\">Important Links</span></h2><ul><li value=\"1\"><a href=\"https://docs.thoughtspot.com/cloud/latest/\" target=\"_blank\" rel=\"noreferrer\" class=\"theme-module__editor-link\"><span style=\"white-space: pre-wrap;\">Main Documentation Page</span></a></li><li value=\"2\"><a href=\"https://docs.thoughtspot.com/cloud/latest/authentication\" target=\"_blank\" rel=\"noreferrer\" class=\"theme-module__editor-link\"><span style=\"white-space: pre-wrap;\">Authentication</span></a></li><li value=\"3\"><a href=\"https://www.thoughtspot.com/legal/trust\" target=\"_blank\" rel=\"noreferrer\" class=\"theme-module__editor-link\"><span style=\"white-space: pre-wrap;\">Security, Architecture, Governance, Risk and Compliance</span></a></li><li value=\"4\"><a href=\"https://docs.thoughtspot.com/cloud/latest/keywords-en-US\" target=\"_blank\" rel=\"noreferrer\" class=\"theme-module__editor-link\"><span style=\"white-space: pre-wrap;\">Keyword Reference</span></a></li><li value=\"5\"><a href=\"https://docs.thoughtspot.com/cloud/latest/formulas\" target=\"_blank\" rel=\"noreferrer\" class=\"theme-module__editor-link\"><span style=\"white-space: pre-wrap;\">Formula Reference</span></a></li><li value=\"6\"><a href=\"https://docs.thoughtspot.com/cloud/latest/security-rls\" target=\"_blank\" rel=\"noreferrer\" class=\"theme-module__editor-link\"><span style=\"white-space: pre-wrap;\">Row Level Security</span></a></li><li value=\"7\"><a href=\"https://docs.thoughtspot.com/cloud/latest/connections\" target=\"_blank\" rel=\"noreferrer\" class=\"theme-module__editor-link\"><span style=\"white-space: pre-wrap;\">ThoughtSpot Connections</span></a></li><li value=\"8\"><a href=\"https://docs.thoughtspot.com/cloud/latest/data-modeling\" target=\"_blank\" rel=\"noreferrer\" class=\"theme-module__editor-link\"><span style=\"white-space: pre-wrap;\">Data Modeling</span></a></li></ul><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><br></p><div class=\"pinboard-note-tile-module__noteTileBg editor-module__bgNode\" style=\"background-color: rgb(255, 255, 255);\"></div>"
+  - id: Viz_9
+    answer:
+      name: Mac Player Analysis
+      tables:
+      - id: RFP **
+        name: RFP **
+        fqn: ede3a363-f875-4caa-bce0-7b2979218801
+      search_query: "[Country] [Game Mode] [Number Players ***] [Game Type] [Platform Name] [Status ***] [Platform Name].MacOSX"
+      answer_columns:
+      - name: Country
+      - name: Game Mode
+      - name: Game Type
+      - name: Number Players ***
+      - name: Platform Name
+      - name: Status ***
+      table:
+        table_columns:
+        - column_id: Country
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Game Mode
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Game Type
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Number Players ***
+          headline_aggregation: SUM
+        - column_id: Platform Name
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Status ***
+          headline_aggregation: COUNT_DISTINCT
+        ordered_column_ids:
+        - Country
+        - Game Mode
+        - Game Type
+        - Platform Name
+        - Status ***
+        - Number Players ***
+        client_state: ""
+      chart:
+        type: SANKEY
+        chart_columns:
+        - column_id: Country
+        - column_id: Game Mode
+        - column_id: Game Type
+        - column_id: Number Players ***
+        - column_id: Platform Name
+        - column_id: Status ***
+        axis_configs:
+        - x:
+          - Platform Name
+          - Game Type
+          "y":
+          - Number Players ***
+        - x:
+          - Game Type
+          - Game Mode
+          "y":
+          - Number Players ***
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Country\",\"columnProperty\": {}},{\"columnId\": \"Game Mode\",\"columnProperty\": {}},{\"columnId\": \"Number Players ***\",\"columnProperty\": {}},{\"columnId\": \"Game Type\",\"columnProperty\": {}},{\"columnId\": \"Platform Name\",\"columnProperty\": {}},{\"columnId\": \"Status ***\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"44c84b22-ddd1-4ed4-af22-49814b64f93e\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number Players ***\"],\"isOpposite\": false}},{\"id\": \"5210c413-ba06-4aa0-bbd6-ca7c0972a455\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Platform Name\",\"Game Type\",\"Game Mode\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: 11a75e9c-bccf-448b-a57a-2b68b92fbe41
   filters:
   - column:
     - Game Mode
@@ -325,6 +386,8 @@ liveboard:
       id: afd77184-455a-4738-9ec0-40eeeb26559a
     - name: Tab 2
       description: ""
+      tiles:
+      - visualization_id: Viz_9
       id: 8a3320c0-0b3c-4cd8-82ef-1dc287cefe95
   parameter_overrides:
   - key: ca9cf071-ae5e-4382-92a1-4349db241162
