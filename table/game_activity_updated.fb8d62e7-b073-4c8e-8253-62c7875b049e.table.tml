@@ -1,0 +1,63 @@
+guid: fb8d62e7-b073-4c8e-8253-62c7875b049e
+table:
+  name: game_activity_updated
+  db: vis_poc
+  schema: thoughtspot_poc
+  db_table: game_activity_updated
+  connection:
+    name: Data Viz POC
+    fqn: 21b23fc0-7b50-4c38-a5c1-3bb65c4ef312
+  columns:
+  - name: puuid
+    db_column_name: puuid
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: partition_date
+    db_column_name: partition_date
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE
+  - name: platform_id
+    db_column_name: platform_id
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT32
+  - name: game_mode_id
+    db_column_name: game_mode_id
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT32
+  - name: country_id
+    db_column_name: country_id
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT32
+  - name: activity_count
+    db_column_name: activity_count
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: activity_duration_sec
+    db_column_name: activity_duration_sec
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64

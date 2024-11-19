@@ -1,0 +1,46 @@
+guid: a4e26f10-59de-4058-b8ef-960f2e7ad2c8
+table:
+  name: player_updated
+  db: vis_poc
+  schema: thoughtspot_poc
+  db_table: player_updated
+  connection:
+    name: Data Viz POC
+    fqn: 21b23fc0-7b50-4c38-a5c1-3bb65c4ef312
+  columns:
+  - name: puuid
+    db_column_name: puuid
+    properties:
+      column_type: ATTRIBUTE
+    db_column_properties:
+      data_type: VARCHAR
+  - name: first_play_time
+    db_column_name: first_play_time
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: last_play_time
+    db_column_name: last_play_time
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: DATE_TIME
+  - name: lifetime_activity_count
+    db_column_name: lifetime_activity_count
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64
+  - name: lifetime_duration_sec
+    db_column_name: lifetime_duration_sec
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT64

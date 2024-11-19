@@ -1,0 +1,32 @@
+guid: 8cfeb76e-340a-4238-a408-df09290392a4
+table:
+  name: platform
+  db: vis_poc
+  schema: thoughtspot_poc
+  db_table: platform
+  connection:
+    name: Data Viz POC
+    fqn: 21b23fc0-7b50-4c38-a5c1-3bb65c4ef312
+  columns:
+  - name: platform_id
+    db_column_name: platform_id
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT32
+  - name: platform_name
+    db_column_name: platform_name
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: device_name
+    db_column_name: device_name
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR

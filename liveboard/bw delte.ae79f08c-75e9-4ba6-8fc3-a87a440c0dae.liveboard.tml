@@ -1,0 +1,42 @@
+guid: ae79f08c-75e9-4ba6-8fc3-a87a440c0dae
+liveboard:
+  name: bw delte
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Unique Count Player ID by Daily Partition Date ***
+      tables:
+      - id: RFP **
+        name: RFP **
+        fqn: ede3a363-f875-4caa-bce0-7b2979218801
+      search_query: "unique count [Player ID] [Partition Date ***].daily [Partition Date ***] = 'last 28 days'"
+      answer_columns:
+      - name: Day(Partition Date ***)
+      - name: Unique Number of Player ID
+      table:
+        table_columns:
+        - column_id: Day(Partition Date ***)
+          headline_aggregation: MIN-MAX
+        - column_id: Unique Number of Player ID
+          headline_aggregation: AVERAGE
+        ordered_column_ids:
+        - Day(Partition Date ***)
+        - Unique Number of Player ID
+        client_state: ""
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Day(Partition Date ***)
+        - column_id: Unique Number of Player ID
+        axis_configs:
+        - x:
+          - Day(Partition Date ***)
+          "y":
+          - Unique Number of Player ID
+        client_state: ""
+      display_mode: CHART_MODE
+    viz_guid: 8440c8c3-f895-4e43-8372-caecdd955cdc
+  parameter_overrides:
+  - key: ca9cf071-ae5e-4382-92a1-4349db241162
+    value:
+      name: RFP **::*

@@ -1,0 +1,32 @@
+guid: 10a57e05-ee31-425c-8b18-eee18174bcfb
+table:
+  name: game_mode
+  db: vis_poc
+  schema: thoughtspot_poc
+  db_table: game_mode
+  connection:
+    name: Data Viz POC
+    fqn: 21b23fc0-7b50-4c38-a5c1-3bb65c4ef312
+  columns:
+  - name: game_mode_id
+    db_column_name: game_mode_id
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: INT32
+  - name: game_type
+    db_column_name: game_type
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR
+  - name: game_mode
+    db_column_name: game_mode
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+    db_column_properties:
+      data_type: VARCHAR

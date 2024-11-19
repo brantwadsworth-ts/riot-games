@@ -1,0 +1,168 @@
+guid: ede3a363-f875-4caa-bce0-7b2979218801
+model:
+  name: RFP **
+  description: The RFP2 worksheet provides a comprehensive overview of player engagement
+    and activity within a gaming environment. It includes data on the frequency and
+    duration of activities, both on a lifetime basis and within the last 28 days,
+    as well as specifics about the first and last play sessions. Additionally, it
+    captures demographic and device information, such as country, platform used, and
+    the type of game mode and game type played, offering insights into player preferences
+    and habits. (AI generated)
+  model_tables:
+  - name: game_activity_updated
+    fqn: fb8d62e7-b073-4c8e-8253-62c7875b049e
+    joins:
+    - with: country
+      'on': '[game_activity_updated::country_id] = [country::country_id]'
+      type: INNER
+      cardinality: MANY_TO_ONE
+    - with: game_mode
+      'on': '[game_activity_updated::game_mode_id] = [game_mode::game_mode_id]'
+      type: INNER
+      cardinality: MANY_TO_ONE
+    - with: platform
+      'on': '[game_activity_updated::platform_id] = [platform::platform_id]'
+      type: INNER
+      cardinality: MANY_TO_ONE
+  - name: country
+    fqn: 4de3f06d-4b83-496f-a5e7-98ffc8df262b
+  - name: player_updated
+    fqn: a4e26f10-59de-4058-b8ef-960f2e7ad2c8
+    joins:
+    - with: game_activity_updated
+      'on': '[player_updated::puuid] = [game_activity_updated::puuid]'
+      type: INNER
+      cardinality: ONE_TO_MANY
+  - name: platform
+    fqn: 8cfeb76e-340a-4238-a408-df09290392a4
+  - name: game_mode
+    fqn: 10a57e05-ee31-425c-8b18-eee18174bcfb
+  formulas:
+  - id: DAU
+    name: DAU
+    expr: group_aggregate ( unique count ( [game_activity_updated::puuid] ) , { [Partition
+      Date Updated ***] } , { } )
+  - id: Days Since 1st Played
+    name: Days Since 1st Played
+    expr: diff_days ( [player_updated::first_play_time] , [Partition Date Updated
+      ***] )
+  - id: Game Hrs ***
+    name: Game Hrs ***
+    expr: '[game_activity_updated::activity_duration_sec] / 3600'
+  - id: Number Players ***
+    name: Number Players ***
+    expr: unique count  ( [game_activity_updated::puuid] )
+  - id: Partition Date Updated ***
+    name: Partition Date Updated ***
+    expr: if ( [*] = true ) then add_days ( [game_activity_updated::partition_date]
+      , diff_days ( today ( ) , 10/01/2024 ) )  else [game_activity_updated::partition_date]
+  columns:
+  - name: Number Players ***
+    formula_id: Number Players ***
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - Players
+      synonym_type: USER_DEFINED
+  - name: Game Hrs ***
+    formula_id: Game Hrs ***
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - Hours
+      synonym_type: USER_DEFINED
+  - name: Partition Date ***
+    formula_id: Partition Date Updated ***
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonyms:
+      - Partition Date
+      synonym_type: USER_DEFINED
+  - name: Days Since 1st Played
+    formula_id: Days Since 1st Played
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  - name: Country
+    column_id: country::name
+    properties:
+      column_type: ATTRIBUTE
+      geo_config:
+        country: true
+  - name: Activity Count
+    column_id: game_activity_updated::activity_count
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+      synonyms:
+      - Number of Activities
+      synonym_type: USER_DEFINED
+  - name: Game Type
+    column_id: game_mode::game_type
+    properties:
+      column_type: ATTRIBUTE
+      synonyms:
+      - Type
+      synonym_type: USER_DEFINED
+  - name: Game Mode
+    column_id: game_mode::game_mode
+    properties:
+      column_type: ATTRIBUTE
+      synonyms:
+      - Mode
+      synonym_type: USER_DEFINED
+  - name: Platform Name
+    column_id: platform::platform_name
+    properties:
+      column_type: ATTRIBUTE
+      synonyms:
+      - Platform
+      synonym_type: USER_DEFINED
+  - name: Device Name
+    column_id: platform::device_name
+    properties:
+      column_type: ATTRIBUTE
+      synonyms:
+      - Device
+      synonym_type: USER_DEFINED
+  - name: Player ID
+    column_id: game_activity_updated::puuid
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+      synonyms:
+      - PUUID
+      synonym_type: USER_DEFINED
+  - name: DAU
+    formula_id: DAU
+    properties:
+      column_type: MEASURE
+      aggregation: SUM
+      index_type: DONT_INDEX
+  properties:
+    is_bypass_rls: false
+    join_progressive: true
+  parameters:
+  - id: ca9cf071-ae5e-4382-92a1-4349db241162
+    name: '*'
+    data_type: BOOL
+    default_value: 'true'
+    list_config:
+      list_choice:
+      - value: 'true'
+        display_name: ''
+      - value: 'false'
+        display_name: ''
+    description: Updated partition date.
+  - id: d992ac90-53f5-45bd-abdf-6f460e65af78
+    name: Start date
+    data_type: DATE
+    default_value: 11/18/2024
+    description: ''
