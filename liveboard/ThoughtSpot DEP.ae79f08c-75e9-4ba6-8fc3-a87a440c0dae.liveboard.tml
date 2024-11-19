@@ -1,6 +1,6 @@
 guid: ae79f08c-75e9-4ba6-8fc3-a87a440c0dae
 liveboard:
-  name: bw delte
+  name: ThoughtSpot DEP
   visualizations:
   - id: Viz_1
     answer:
@@ -47,41 +47,6 @@ liveboard:
     viz_guid: 8440c8c3-f895-4e43-8372-caecdd955cdc
   - id: Viz_2
     answer:
-      name: Number Players *** by Daily Partition Date ***
-      tables:
-      - id: RFP **
-        name: RFP **
-        fqn: ede3a363-f875-4caa-bce0-7b2979218801
-      search_query: "[Number Players ***] [Partition Date ***].daily [Partition Date ***].'last 28 days'"
-      answer_columns:
-      - name: Day(Partition Date ***)
-      - name: Number Players ***
-      table:
-        table_columns:
-        - column_id: Day(Partition Date ***)
-          headline_aggregation: MIN-MAX
-        - column_id: Number Players ***
-          headline_aggregation: SUM
-        ordered_column_ids:
-        - Day(Partition Date ***)
-        - Number Players ***
-        client_state: ""
-      chart:
-        type: KPI
-        chart_columns:
-        - column_id: Day(Partition Date ***)
-        - column_id: Number Players ***
-        axis_configs:
-        - x:
-          - Day(Partition Date ***)
-          "y":
-          - Number Players ***
-        client_state: ""
-        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Day(Partition Date ***)\",\"columnProperty\": {}},{\"columnId\": \"Number Players ***\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"34cc19f2-0d1d-4870-b6bc-367170a46c5a\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number Players ***\"],\"isOpposite\": false}},{\"id\": \"a7b96ccc-c686-4547-b5b7-ed9f41720815\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Day(Partition Date ***)\"]}}]}"
-      display_mode: CHART_MODE
-    viz_guid: 329222b4-6638-4c4e-a065-2014af28b24b
-  - id: Viz_3
-    answer:
       name: Total Players Daily
       tables:
       - id: RFP **
@@ -115,7 +80,7 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Day(Partition Date ***)\",\"columnProperty\": {}},{\"columnId\": \"Number Players ***\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"34cc19f2-0d1d-4870-b6bc-367170a46c5a\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number Players ***\"],\"isOpposite\": false}},{\"id\": \"a7b96ccc-c686-4547-b5b7-ed9f41720815\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Day(Partition Date ***)\"]}}]}"
       display_mode: CHART_MODE
     viz_guid: 12fdbc54-95f7-47c0-a6e4-6483634bff87
-  - id: Viz_4
+  - id: Viz_3
     answer:
       name: Total New Players Daily
       tables:
@@ -150,7 +115,7 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Day(Partition Date ***)\",\"columnProperty\": {}},{\"columnId\": \"Number Players ***\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"34cc19f2-0d1d-4870-b6bc-367170a46c5a\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number Players ***\"],\"isOpposite\": false}},{\"id\": \"a7b96ccc-c686-4547-b5b7-ed9f41720815\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Day(Partition Date ***)\"]}}]}"
       display_mode: CHART_MODE
     viz_guid: 83c45505-e757-4eb9-abae-724e5b890024
-  - id: Viz_5
+  - id: Viz_4
     answer:
       name: Total Revived Players Daily
       tables:
@@ -185,7 +150,7 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Day(Partition Date ***)\",\"columnProperty\": {}},{\"columnId\": \"Number Players ***\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"34cc19f2-0d1d-4870-b6bc-367170a46c5a\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number Players ***\"],\"isOpposite\": false}},{\"id\": \"a7b96ccc-c686-4547-b5b7-ed9f41720815\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Day(Partition Date ***)\"]}}]}"
       display_mode: CHART_MODE
     viz_guid: 6b4325c7-5467-4e73-85c0-fa233c8582ae
-  - id: Viz_6
+  - id: Viz_5
     answer:
       name: Player Mix Daily
       tables:
@@ -227,7 +192,7 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Day(Partition Date ***)\",\"columnProperty\": {}},{\"columnId\": \"Number Players ***\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"ad6da0c4-30af-46c0-87e2-3b747691045b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number Players ***\"],\"isOpposite\": false}},{\"id\": \"426ab60d-e4ca-403d-989f-71060a4bfdee\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Day(Partition Date ***)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Number Players ***\",\"color\": \"#FF8142\"}]}"
       display_mode: CHART_MODE
     viz_guid: cb7371bc-1ebc-4176-9fd7-b647beca5b4c
-  - id: Viz_7
+  - id: Viz_6
     answer:
       name: Daily Percentage Growth
       tables:
@@ -262,7 +227,7 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Day(Partition Date ***)\",\"columnProperty\": {}},{\"columnId\": \"Growth of Number Players ***\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"bbe8dbe3-d128-464f-bc01-bb77e7537e7d\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Growth of Number Players ***\"],\"isOpposite\": false}},{\"id\": \"a70ad45d-e2b1-4923-8790-927805423973\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Day(Partition Date ***)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Growth of Number Players ***\",\"color\": \"#8C62F5\"}]}"
       display_mode: CHART_MODE
     viz_guid: 7d873a1f-c03c-4939-b3cc-0c19a5cdf4f2
-  - id: Viz_8
+  - id: Viz_7
     answer:
       name: Active players by Country
       tables:
@@ -297,6 +262,70 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Country\",\"columnProperty\": {}},{\"columnId\": \"Number Players ***\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"70c3d287-4a88-4bd8-9d03-e5c622bc3d95\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number Players ***\"],\"isOpposite\": false}},{\"id\": \"48c6f71a-2b12-479c-b788-398e2f56fdb7\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Country\"]}}]}"
       display_mode: CHART_MODE
     viz_guid: 68eb4ea0-863c-4e9a-a62a-a30073740885
+  - id: Viz_8
+    viz_guid: 28d7f2ce-8ba8-45ea-a2e6-b45561213716
+    note_tile:
+      html_parsed_string: "<p class=\"theme-module__editor-paragraph\"><img id=\"7b61249c-6272-4fcb-bf0a-4d38480f012a\" alt=\"UPLOAD\" style=\"height: inherit; width: 44%; max-width: 100%;\"></p><p class=\"theme-module__editor-paragraph\"><br></p><h1 dir=\"ltr\"><span style=\"white-space: pre-wrap;\">Data Exploration Platform</span></h1><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><br></p><hr><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><br></p><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><br></p><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><br></p><div class=\"pinboard-note-tile-module__noteTileBg editor-module__bgNode\" style=\"background-color: rgb(255, 255, 255);\"></div>"
+  filters:
+  - column:
+    - Game Mode
+    is_mandatory: false
+    is_single_value: false
+    display_name: ""
+  - column:
+    - Status ***
+    is_mandatory: false
+    is_single_value: false
+    display_name: ""
+  layout:
+    tabs:
+    - name: Player Status
+      description: ""
+      tiles:
+      - visualization_id: Viz_1
+        x: 6
+        "y": 4
+        height: 4
+        width: 6
+      - visualization_id: Viz_2
+        x: 3
+        "y": 0
+        height: 4
+        width: 3
+      - visualization_id: Viz_3
+        x: 6
+        "y": 0
+        height: 4
+        width: 3
+      - visualization_id: Viz_4
+        x: 9
+        "y": 0
+        height: 4
+        width: 3
+      - visualization_id: Viz_5
+        x: 0
+        "y": 4
+        height: 4
+        width: 6
+      - visualization_id: Viz_6
+        x: 6
+        "y": 8
+        height: 8
+        width: 6
+      - visualization_id: Viz_7
+        x: 0
+        "y": 8
+        height: 8
+        width: 6
+      - visualization_id: Viz_8
+        x: 0
+        "y": 0
+        height: 4
+        width: 3
+      id: afd77184-455a-4738-9ec0-40eeeb26559a
+    - name: Tab 2
+      description: ""
+      id: 8a3320c0-0b3c-4cd8-82ef-1dc287cefe95
   parameter_overrides:
   - key: ca9cf071-ae5e-4382-92a1-4349db241162
     value:
