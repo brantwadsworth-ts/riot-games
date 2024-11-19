@@ -45,6 +45,41 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Day(Partition Date ***)\",\"columnProperty\": {}},{\"columnId\": \"Unique Number of Player ID\",\"columnProperty\": {}},{\"columnId\": \"Status ***\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"1f9ca3f1-eff6-42e7-8f66-64f6cb2805ee\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Unique Number of Player ID\"],\"isOpposite\": false}},{\"id\": \"e083aed3-8686-42c8-94fc-8f6752c1aa21\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Day(Partition Date ***)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Unique Number of Player ID\",\"color\": \"#FCC838\"},{\"serieName\": \"new\",\"color\": \"#2E75F0\"},{\"serieName\": \"retained\",\"color\": \"#48D1E0\"},{\"serieName\": \"revived\",\"color\": \"#FCC838\"}]}"
       display_mode: CHART_MODE
     viz_guid: 8440c8c3-f895-4e43-8372-caecdd955cdc
+  - id: Viz_2
+    answer:
+      name: Number Players *** by Daily Partition Date ***
+      tables:
+      - id: RFP **
+        name: RFP **
+        fqn: ede3a363-f875-4caa-bce0-7b2979218801
+      search_query: "[Number Players ***] [Partition Date ***].daily [Partition Date ***].'last 28 days'"
+      answer_columns:
+      - name: Day(Partition Date ***)
+      - name: Number Players ***
+      table:
+        table_columns:
+        - column_id: Day(Partition Date ***)
+          headline_aggregation: MIN-MAX
+        - column_id: Number Players ***
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Day(Partition Date ***)
+        - Number Players ***
+        client_state: ""
+      chart:
+        type: KPI
+        chart_columns:
+        - column_id: Day(Partition Date ***)
+        - column_id: Number Players ***
+        axis_configs:
+        - x:
+          - Day(Partition Date ***)
+          "y":
+          - Number Players ***
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Day(Partition Date ***)\",\"columnProperty\": {}},{\"columnId\": \"Number Players ***\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"34cc19f2-0d1d-4870-b6bc-367170a46c5a\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number Players ***\"],\"isOpposite\": false}},{\"id\": \"a7b96ccc-c686-4547-b5b7-ed9f41720815\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Day(Partition Date ***)\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: 329222b4-6638-4c4e-a065-2014af28b24b
   parameter_overrides:
   - key: ca9cf071-ae5e-4382-92a1-4349db241162
     value:
