@@ -227,6 +227,41 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Day(Partition Date ***)\",\"columnProperty\": {}},{\"columnId\": \"Number Players ***\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"ad6da0c4-30af-46c0-87e2-3b747691045b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number Players ***\"],\"isOpposite\": false}},{\"id\": \"426ab60d-e4ca-403d-989f-71060a4bfdee\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Day(Partition Date ***)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Number Players ***\",\"color\": \"#FF8142\"}]}"
       display_mode: CHART_MODE
     viz_guid: cb7371bc-1ebc-4176-9fd7-b647beca5b4c
+  - id: Viz_7
+    answer:
+      name: Daily Percentage Growth
+      tables:
+      - id: RFP **
+        name: RFP **
+        fqn: ede3a363-f875-4caa-bce0-7b2979218801
+      search_query: "growth of [Number Players ***] by [Partition Date ***] [Partition Date ***].daily [Partition Date ***].'last 28 days'"
+      answer_columns:
+      - name: Day(Partition Date ***)
+      - name: Growth of Number Players ***
+      table:
+        table_columns:
+        - column_id: Day(Partition Date ***)
+          headline_aggregation: MIN-MAX
+        - column_id: Growth of Number Players ***
+          headline_aggregation: MIN
+        ordered_column_ids:
+        - Day(Partition Date ***)
+        - Growth of Number Players ***
+        client_state: ""
+      chart:
+        type: WATERFALL
+        chart_columns:
+        - column_id: Day(Partition Date ***)
+        - column_id: Growth of Number Players ***
+        axis_configs:
+        - x:
+          - Day(Partition Date ***)
+          "y":
+          - Growth of Number Players ***
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Day(Partition Date ***)\",\"columnProperty\": {}},{\"columnId\": \"Growth of Number Players ***\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"bbe8dbe3-d128-464f-bc01-bb77e7537e7d\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Growth of Number Players ***\"],\"isOpposite\": false}},{\"id\": \"a70ad45d-e2b1-4923-8790-927805423973\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Day(Partition Date ***)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Growth of Number Players ***\",\"color\": \"#8C62F5\"}]}"
+      display_mode: CHART_MODE
+    viz_guid: 7d873a1f-c03c-4939-b3cc-0c19a5cdf4f2
   parameter_overrides:
   - key: ca9cf071-ae5e-4382-92a1-4349db241162
     value:
