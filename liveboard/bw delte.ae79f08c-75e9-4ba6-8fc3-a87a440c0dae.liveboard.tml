@@ -9,31 +9,40 @@ liveboard:
       - id: RFP **
         name: RFP **
         fqn: ede3a363-f875-4caa-bce0-7b2979218801
-      search_query: "unique count [Player ID] [Partition Date ***].daily [Partition Date ***] = 'last 28 days'"
+      search_query: "unique count [Player ID] [Partition Date ***].daily [Partition Date ***] = 'last 28 days' [Status ***]"
       answer_columns:
       - name: Day(Partition Date ***)
+      - name: Status ***
       - name: Unique Number of Player ID
       table:
         table_columns:
         - column_id: Day(Partition Date ***)
           headline_aggregation: MIN-MAX
+        - column_id: Status ***
+          headline_aggregation: COUNT_DISTINCT
         - column_id: Unique Number of Player ID
           headline_aggregation: AVERAGE
         ordered_column_ids:
         - Day(Partition Date ***)
+        - Status ***
         - Unique Number of Player ID
         client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"columnProperties\": [{\"columnId\": \"Day(Partition Date ***)\",\"columnProperty\": {}},{\"columnId\": \"Unique Number of Player ID\",\"columnProperty\": {}}]}"
       chart:
         type: LINE
         chart_columns:
         - column_id: Day(Partition Date ***)
+        - column_id: Status ***
         - column_id: Unique Number of Player ID
         axis_configs:
         - x:
           - Day(Partition Date ***)
           "y":
           - Unique Number of Player ID
+          color:
+          - Status ***
         client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"dataFieldArea\": \"column\"}},\"columnProperties\": [{\"columnId\": \"Day(Partition Date ***)\",\"columnProperty\": {}},{\"columnId\": \"Unique Number of Player ID\",\"columnProperty\": {}},{\"columnId\": \"Status ***\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"1f9ca3f1-eff6-42e7-8f66-64f6cb2805ee\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Unique Number of Player ID\"],\"isOpposite\": false}},{\"id\": \"e083aed3-8686-42c8-94fc-8f6752c1aa21\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Day(Partition Date ***)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Unique Number of Player ID\",\"color\": \"#FCC838\"},{\"serieName\": \"new\",\"color\": \"#2E75F0\"},{\"serieName\": \"retained\",\"color\": \"#48D1E0\"},{\"serieName\": \"revived\",\"color\": \"#FCC838\"}]}"
       display_mode: CHART_MODE
     viz_guid: 8440c8c3-f895-4e43-8372-caecdd955cdc
   parameter_overrides:

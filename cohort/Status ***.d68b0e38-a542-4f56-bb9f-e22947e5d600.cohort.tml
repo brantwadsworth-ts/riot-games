@@ -1,0 +1,78 @@
+guid: d68b0e38-a542-4f56-bb9f-e22947e5d600
+cohort:
+  name: Status ***
+  description: Query Set to calculate the status for each player. (not verified)
+  answer:
+    tables:
+    - id: RFP **
+      name: RFP **
+      fqn: ede3a363-f875-4caa-bce0-7b2979218801
+    formulas:
+    - id: Status
+      name: Status
+      expr: "if ( [Total Count Puuid(last 28 days)] = [Total Count Puuid(all)] ) then 'new' else if ( [Total Count Puuid(last 28 days)] = 0 ) then 'churned' else if ( [Total Count Puuid(2 months ago)] > 0 and [Total Count Puuid(last 28 days)] > 0 ) then 'retained' else if ( [Total Count Puuid(last 28 days)] > 0 and [Total Count Puuid(2 months ago)] = 0 ) then 'revived' else 'other'"
+      was_auto_generated: false
+    - id: Total Count Puuid(2 months ago)
+      name: Total Count Puuid(2 months ago)
+      expr: "group_aggregate ( count ( [Player ID] ) , query_groups ( ) , query_filters ( ) + { diff_months ( [Partition Date ***] , today ( ) ) = -2 } )"
+      was_auto_generated: true
+    - id: Total Count Puuid(all)
+      name: Total Count Puuid(all)
+      expr: "count ( [Player ID] )"
+      was_auto_generated: true
+    - id: Total Count Puuid(last 28 days)
+      name: Total Count Puuid(last 28 days)
+      expr: "group_aggregate ( count ( [Player ID] ) , query_groups ( ) , query_filters ( ) + { diff_days ( [Partition Date ***] , today ( ) ) >= -28 and diff_days ( [Partition Date ***] , today ( ) ) <= -1 } )"
+      was_auto_generated: true
+    - id: Total Count Puuid(all)
+      name: Total Count Puuid(all)
+      expr: "count ( [Player ID] )"
+      was_auto_generated: true
+    - id: Total Count Puuid(last 2 months)
+      name: Total Count Puuid(last 2 months)
+      expr: "group_aggregate ( count ( [Player ID] ) , query_groups ( ) , query_filters ( ) + { diff_months ( [Partition Date ***] , today ( ) ) >= -2 and diff_months ( [Partition Date ***] , today ( ) ) <= -1 } )"
+      was_auto_generated: true
+    - id: Total Count Puuid(last 28 days)
+      name: Total Count Puuid(last 28 days)
+      expr: "group_aggregate ( count ( [Player ID] ) , query_groups ( ) , query_filters ( ) + { diff_days ( [Partition Date ***] , today ( ) ) >= -28 and diff_days ( [Partition Date ***] , today ( ) ) <= -1 } )"
+      was_auto_generated: true
+    search_query: "[Player ID] [Status] [Total Count Puuid(last 28 days)] [Total Count Puuid(2 months ago)] [Total Count Puuid(all)]"
+    answer_columns:
+    - name: Player ID
+    - name: Status
+    - name: Total Count Puuid(2 months ago)
+    - name: Total Count Puuid(all)
+    - name: Total Count Puuid(last 28 days)
+    table:
+      table_columns:
+      - column_id: Player ID
+        headline_aggregation: COUNT_DISTINCT
+      - column_id: Status
+        headline_aggregation: COUNT_DISTINCT
+      - column_id: Total Count Puuid(2 months ago)
+        headline_aggregation: TABLE_AGGR
+      - column_id: Total Count Puuid(all)
+        headline_aggregation: AVERAGE
+      - column_id: Total Count Puuid(last 28 days)
+        headline_aggregation: TABLE_AGGR
+      ordered_column_ids:
+      - Player ID
+      - Status
+      - Total Count Puuid(all)
+      - Total Count Puuid(last 28 days)
+      - Total Count Puuid(2 months ago)
+      client_state: ""
+      client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"widthState\": [{\"columnId\": \"Player ID\",\"width\": 352.79999999999995}],\"orderedColumnIds\": [\"Player ID\",\"Status\",\"Total Count Puuid(last 28 days)\",\"Total Count Puuid(2 months ago)\",\"Total Count Puuid(all)\"]}"
+    display_mode: TABLE_MODE
+  owner: brant.wadsworth@thoughtspot.com
+  config:
+    cohort_type: ADVANCED
+    anchor_column_id: Player ID
+    return_column_id: Status
+    cohort_grouping_type: COLUMN_BASED
+    hide_excluded_query_values: true
+    group_excluded_query_values: Excluded values
+  worksheet:
+    id: RFP **
+    name: RFP **
+    fqn: ede3a363-f875-4caa-bce0-7b2979218801
