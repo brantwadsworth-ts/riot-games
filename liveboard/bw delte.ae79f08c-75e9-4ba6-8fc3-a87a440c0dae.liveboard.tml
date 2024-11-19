@@ -262,6 +262,41 @@ liveboard:
         client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Day(Partition Date ***)\",\"columnProperty\": {}},{\"columnId\": \"Growth of Number Players ***\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"bbe8dbe3-d128-464f-bc01-bb77e7537e7d\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Growth of Number Players ***\"],\"isOpposite\": false}},{\"id\": \"a70ad45d-e2b1-4923-8790-927805423973\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Day(Partition Date ***)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Growth of Number Players ***\",\"color\": \"#8C62F5\"}]}"
       display_mode: CHART_MODE
     viz_guid: 7d873a1f-c03c-4939-b3cc-0c19a5cdf4f2
+  - id: Viz_8
+    answer:
+      name: Active players by Country
+      tables:
+      - id: RFP **
+        name: RFP **
+        fqn: ede3a363-f875-4caa-bce0-7b2979218801
+      search_query: "[Number Players ***] [Country] [Status ***] not contains 'churned'"
+      answer_columns:
+      - name: Country
+      - name: Number Players ***
+      table:
+        table_columns:
+        - column_id: Country
+          show_headline: false
+        - column_id: Number Players ***
+          show_headline: false
+        ordered_column_ids:
+        - Country
+        - Number Players ***
+        client_state: ""
+      chart:
+        type: GEO_AREA
+        chart_columns:
+        - column_id: Country
+        - column_id: Number Players ***
+        axis_configs:
+        - x:
+          - Country
+          "y":
+          - Number Players ***
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT2\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"pivotSummariesState\": {}}},\"columnProperties\": [{\"columnId\": \"Country\",\"columnProperty\": {}},{\"columnId\": \"Number Players ***\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"70c3d287-4a88-4bd8-9d03-e5c622bc3d95\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number Players ***\"],\"isOpposite\": false}},{\"id\": \"48c6f71a-2b12-479c-b788-398e2f56fdb7\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Country\"]}}]}"
+      display_mode: CHART_MODE
+    viz_guid: 68eb4ea0-863c-4e9a-a62a-a30073740885
   parameter_overrides:
   - key: ca9cf071-ae5e-4382-92a1-4349db241162
     value:
