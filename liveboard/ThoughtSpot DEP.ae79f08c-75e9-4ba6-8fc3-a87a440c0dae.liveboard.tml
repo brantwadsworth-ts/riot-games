@@ -265,7 +265,7 @@ liveboard:
   - id: Viz_8
     viz_guid: 28d7f2ce-8ba8-45ea-a2e6-b45561213716
     note_tile:
-      html_parsed_string: "<p class=\"theme-module__editor-paragraph\"><img id=\"7b61249c-6272-4fcb-bf0a-4d38480f012a\" alt=\"UPLOAD\" style=\"height: inherit; width: 44%; max-width: 100%;\"></p><p class=\"theme-module__editor-paragraph\"><br></p><h1 dir=\"ltr\"><span style=\"white-space: pre-wrap;\">Data Exploration Platform</span></h1><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><br></p><hr><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><br></p><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><br></p><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><br></p><div class=\"pinboard-note-tile-module__noteTileBg editor-module__bgNode\" style=\"background-color: rgb(255, 255, 255);\"></div>"
+      html_parsed_string: "<p class=\"theme-module__editor-paragraph\"><img id=\"7b61249c-6272-4fcb-bf0a-4d38480f012a\" alt=\"UPLOAD\" style=\"height: inherit; width: 44%; max-width: 100%;\"></p><p class=\"theme-module__editor-paragraph\"><br></p><h1 dir=\"ltr\"><span style=\"white-space: pre-wrap;\">Data Exploration Platform</span></h1><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><br></p><hr><ul><li value=\"1\"><a href=\"https://docs.google.com/document/d/1XyqUHvyj63w7aFhk9WE-VaRqW2b55etPgEFJeV2JSH0/edit?tab=t.0#heading=h.xx5c85z5o3lr\" target=\"_blank\" rel=\"noreferrer\" class=\"theme-module__editor-link\"><span style=\"white-space: pre-wrap;\">Riot RFP</span></a></li><li value=\"2\"><a href=\"https://docs.google.com/presentation/d/1Ux72U4f3dg50YSe5E3rzHUZDFc9U4jBxFrTzDlaitt4/edit#slide=id.g3162db030e8_0_28\" target=\"_blank\" rel=\"noreferrer\" class=\"theme-module__editor-link\"><span style=\"white-space: pre-wrap;\">ThoughtSpot DEP Showcase Deck</span></a></li></ul><p class=\"theme-module__editor-paragraph\"><br></p><h2 class=\"theme-module__editor-h2\" dir=\"ltr\"><span style=\"white-space: pre-wrap;\">Important Links</span></h2><ul><li value=\"1\"><a href=\"https://docs.thoughtspot.com/cloud/latest/\" target=\"_blank\" rel=\"noreferrer\" class=\"theme-module__editor-link\"><span style=\"white-space: pre-wrap;\">Main Documentation Page</span></a></li><li value=\"2\"><a href=\"https://docs.thoughtspot.com/cloud/latest/authentication\" target=\"_blank\" rel=\"noreferrer\" class=\"theme-module__editor-link\"><span style=\"white-space: pre-wrap;\">Authentication</span></a></li><li value=\"3\"><a href=\"https://www.thoughtspot.com/legal/trust\" target=\"_blank\" rel=\"noreferrer\" class=\"theme-module__editor-link\"><span style=\"white-space: pre-wrap;\">Security, Architecture, Governance, Risk and Compliance</span></a></li><li value=\"4\"><a href=\"https://docs.thoughtspot.com/cloud/latest/keywords-en-US\" target=\"_blank\" rel=\"noreferrer\" class=\"theme-module__editor-link\"><span style=\"white-space: pre-wrap;\">Keyword Reference</span></a></li><li value=\"5\"><a href=\"https://docs.thoughtspot.com/cloud/latest/formulas\" target=\"_blank\" rel=\"noreferrer\" class=\"theme-module__editor-link\"><span style=\"white-space: pre-wrap;\">Formula Reference</span></a></li><li value=\"6\"><a href=\"https://docs.thoughtspot.com/cloud/latest/security-rls\" target=\"_blank\" rel=\"noreferrer\" class=\"theme-module__editor-link\"><span style=\"white-space: pre-wrap;\">Row Level Security</span></a></li><li value=\"7\"><a href=\"https://docs.thoughtspot.com/cloud/latest/connections\" target=\"_blank\" rel=\"noreferrer\" class=\"theme-module__editor-link\"><span style=\"white-space: pre-wrap;\">ThoughtSpot Connections</span></a></li><li value=\"8\"><a href=\"https://docs.thoughtspot.com/cloud/latest/data-modeling\" target=\"_blank\" rel=\"noreferrer\" class=\"theme-module__editor-link\"><span style=\"white-space: pre-wrap;\">Data Modeling</span></a></li></ul><p class=\"theme-module__editor-paragraph\" dir=\"ltr\"><br></p><div class=\"pinboard-note-tile-module__noteTileBg editor-module__bgNode\" style=\"background-color: rgb(255, 255, 255);\"></div>"
   filters:
   - column:
     - Game Mode
@@ -283,9 +283,9 @@ liveboard:
       description: ""
       tiles:
       - visualization_id: Viz_1
-        x: 6
-        "y": 4
-        height: 4
+        x: 0
+        "y": 8
+        height: 5
         width: 6
       - visualization_id: Viz_2
         x: 3
@@ -309,13 +309,13 @@ liveboard:
         width: 6
       - visualization_id: Viz_6
         x: 6
-        "y": 8
-        height: 8
+        "y": 4
+        height: 4
         width: 6
       - visualization_id: Viz_7
-        x: 0
+        x: 6
         "y": 8
-        height: 8
+        height: 5
         width: 6
       - visualization_id: Viz_8
         x: 0
